@@ -1,0 +1,26 @@
+.midle{
+    position: relative;
+    margin-top: 0.6 * @unit;
+    margin-bottom: 0.4 * @unit;
+    width: 360 * 4px;
+    height: 100%;
+    // overflow-x: hidden;
+    div{
+        //  position: absolute;
+        box-sizing: border-box;
+        width: 3.6 * @unit;
+        height: 100%;
+        float: left;
+        text-align: center;
+        span{
+            
+        }
+        .nth-chile(1);
+    }
+}
+.nth-chile(@index) when(@index <= 4){
+    &:nth-child(@{index}){
+        background-color:extract(@colorList,@index) ;
+    }
+    .nth-chile(@index + 1);
+}
